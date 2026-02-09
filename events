@@ -1,8 +1,0 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head><meta charset="UTF-8"><title>子页面 1</title></head>
-<body>
-    <h1>这是子文件夹 2 的内容</h1>
-    <a href="../">返回主页</a>
-</body>
-</html>
