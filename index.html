@@ -7,14 +7,24 @@
 <img src="https://www.apache.org/icons/folder.gif"> <a href="events/">Events</a>
 
 <br>
-[ 累计访问量: <span id="visitor-count">...</span> ]
+---------------------------------------
+[ VISITOR NO. <span id="busuanzi_value_site_pv">00000</span> ]
+---------------------------------------
 </pre>
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 <script>
-    function cb(response) {
-        document.getElementById('visitor-count').innerText = response.value;
-    }
+  var checkExist = setInterval(function() {
+     var countElement = document.getElementById('busuanzi_value_site_pv');
+     if (countElement && countElement.innerText !== "..." && countElement.innerText !== "00000") {
+        var num = countElement.innerText;
+        // 补足 5 位数，如果不够前面加 0
+        countElement.innerText = num.padStart(5, '0');
+        clearInterval(checkExist);
+     }
+  }, 100);
 </script>
-<script async src="https://api.countapi.xyz/hit/feiren-site-2024/visits?callback=cb"></script>
+
 </body>
 </html>
