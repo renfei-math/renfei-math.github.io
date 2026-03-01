@@ -6,20 +6,15 @@
 <img src="https://www.apache.org/icons/folder.gif"> <a href="papers/">Papers</a>
 <img src="https://www.apache.org/icons/folder.gif"> <a href="events/">Events</a>
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com/" target="_blank">
-<img src="https://hitwebcounter.com/counter/counter.php?page=21480005&style=0008&nbdigits=5&type=page&initCount=0" title="Free Tools" Alt="Free Tools"   border="0" /></a>
+<br>
+[ 累计访问量: <span id="visitor-count">...</span> ]
 </pre>
+
+<script>
+    function cb(response) {
+        document.getElementById('visitor-count').innerText = response.value;
+    }
+</script>
+<script async src="https://api.countapi.xyz/hit/feiren-site-2024/visits?callback=cb"></script>
 </body>
 </html>
